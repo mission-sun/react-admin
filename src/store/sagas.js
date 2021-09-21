@@ -4,8 +4,7 @@ function sagaInit() {
 	console.log('saga-init');
 }
 
-export default function * helloSagas() {
+export default function* helloSagas() {
 	console.log('sagas');
-	takeEvery('sagaInit', sagaInit)
-	// yield return 'hello';
+	yield takeEvery('sagaInit', sagaInit)
 }
